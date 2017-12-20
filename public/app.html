@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meal Mapper | My Plan</title>
+
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width initial-scale=1.0'>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+
+<!-- Body from React router -->
+<div id="app"></div>
+
+<!--Add recipe modal-->
+ <div id="recipe-modal" class="modal">
+	  <div class="row">
+			<div class="col s12">
+				<div class="modal-content">
+				<h4 class='center-align'>Add a Recipe</h4>
+				<hr>
+
+				<div class='row'>
+					<div class='input-field col s12'>
+						<input type='text' id='recipe-url'>
+						<label for='recipe-url'>Recipe URL</label>
+					</div>
+				</div>
+
+				<div class='row'>
+					<div class='input-field col s6'>
+						<select id='mealdrop' name="meal">
+							<option value="breakfast">Breakfast</option>
+							<option value="lunch">Lunch</option>
+							<option value="dinner">Dinner</option>
+							<option value="snack">Snack</option>
+						</select>
+					</div>
+
+					<div class='col s3'>
+						<p>
+							<input type='checkbox' id='vegetarian-check'>
+							<label for='vegetarian-check'>Vegetarian</label>
+						</p>
+					</div>
+					<div class='col s3'>
+						<p>
+							<input type='checkbox' id='vegan-check'>
+							<label for='vegan-check'>Vegan</label>
+						</p>
+					</div>
+
+				</div>
+
+				<div class='row'>
+					<div class='input-field col s12'>
+						<input type='text' id='recipe-tags' placeholder="Thai beef grill summer pasta pumpkin">
+						<label for='recipe-url'>Tags (separate with spaces)</label>
+					</div>
+				</div>
+
+				</div>
+				<div class="modal-footer">
+				  <a class='waves-effect waves-green btn blue lighten-1' id='add-recipe'>Add Recipe</a>
+				  <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Close</a>
+				</div>
+			</div>
+	  </div>
+ </div>
+
+<!-- React source script -->
+<script src='js/bundle.js'></script>
+<script src='js/search-slide.js'></script>
+<script src='js/day-sizer.js'></script>
+<script src='js/add-recipe.js'></script>
+
+</body>
+</html>
+ d

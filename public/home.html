@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#2196F3">
+    <title>Meal Blueprint</title>
+
+    <!-- Import CSS & plugins here -->
+    <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
+    <link href="min/custom-min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+
+</head>
+<body id="top" class="scrollspy">
+
+<!-- Pre Loader -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+ 
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+ 
+</div>
+
+<!--Navigation-->
+ <div class="navbar-fixed">
+    <nav id="nav_f" class="default_color" role="navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+                <!-- App IMAGE logo here -->
+                <a href="#" id="logo-container" class="brand-logo"><img src='images/meal'></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#intro">Process</a></li>
+                    <li><a href="#work">Product</a></li>
+                    <li><a href="#about">About</a></li>
+                    <!--<li><a href="#login-signup-modal">Log In/Sign up</a></li>-->
+                    <!-- <li><a href="#contact">Contact</a></li>  -->
+
+                    <!-- Modal -->
+
+                    <li><a class="modal-trigger login-signup" href="#login-signup-modal">Log In / Signup</a></li>
+                    
+                    <!-- Modal -->
+                </ul>
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="#intro">Process</a></li>
+                    <li><a href="#work">Product</a></li>
+                    <!--<li><a href="#login-signup-modal">Log In/Sign up</a></li>-->
+
+                    <!-- <li><a href="#contact">Contact</a></li>  -->
+
+
+                    <!-- Modal(Responsive)-->
+
+                    <li><a class="modal-trigger login-signup" href="#login-signup-modal">Log In / Signup</a></li>
+                    
+                    <!-- Modal(Responsive)-->
+                </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!-- Login/Signup Modal -->
+
+<div id="login-signup-modal" class="modal">
+    <div class="row">
+        <div>
+            <ul class="tabs">
+                <li class="tab col s6"><a class="active modal-tab" href="#login">Login</a></li>
+                <li class="tab col s6"><a class="modal-tab" href="#signup">Sign Up</a></li>
+            </ul>
+        </div>
+        <div id="login" class="col s12">
+            <div class="modal-content">
+                <div class="row">
+                    <form class="col s12 login-form">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="login-email" type="email" class="validate">
+                                <label for="login-email" data-error="invalid">Email Address</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="login-password" type="password" class="validate">
+                                <label for="login-password">Password</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Close</a>
+                <button type="submit" class="modal-action waves-effect waves-green btn-flat blue lighten-1 action" id="login-button">Login</button>
+            </div>
+        </div>
+        <div id="signup" class="col s12">
+            <div class="modal-content">
+                <div class="row">
+                    <form class="col s12 signup-form">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="first-name" type="text" class="validate">
+                                <label for="first-name">First Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last-name" type="text" class="validate">
+                                <label for="last-name">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="signup-email" type="email" class="validate">
+                                <label for="signup-email">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="signup-password" type="password" class="validate">
+                                <label for="signup-password">Password</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Close</a>
+                <button type="submit" class="modal-action waves-effect waves-green btn-flat blue lighten-1 action" id="signup-button">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Hero-->
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+        <h1 class="text_h center header cd-headline letters type">
+            <span>Your meals</span> 
+            <span class="cd-words-wrapper waiting">
+                <b class="is-visible">planned</b>
+                <b>prepared</b>
+                <b>portioned</b>
+            </span>
+        </h1>
+    </div>
+</div>
+
+<!--Intro|service-->
+<div id="intro" class="section scrollspy">
+    <div class="container">
+        <div class="row">
+            <div  class="col s12">
+                <!-- Include Healthy Quote -->
+                <h2 class="center header text_h2"> "A healthy outside starts from the inside."<br>
+
+                <span class="span_h2"> -Robert Urich</span> </h2>
+            </div>
+
+            <div  class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                    <i class="mdi-image-grid-on"></i>
+                    <h5 class="promo-caption">Plan</h5>
+                    <p class="light center">The Meal Blueprint Grid you can quickly and easily build meals for the week that match your customized Macro Nutrient requirements.</p>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                    <i class="mdi-action-add-shopping-cart"></i>
+                    <h5 class="promo-caption">Prepare</h5>
+                    <p class="light center">Prepare a week of planned meals into food ready to eat using our easy to use grocery list and recipes.</p>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                    <i class="mdi-communication-call-split"></i>
+                    <h5 class="promo-caption">Portion</h5>
+                    <p class="light center"> Complete the weeks MealPlan with meals that are properly portioned.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Work-->
+<div class="section scrollspy" id="work">
+    <div class="container">
+        <h2 class="header text_b">Product Features</h2>
+        <div class="row">
+            <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <!-- image insert -->
+                        <img class="activator" src="img/meal.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">MealGrid<i class="mdi-navigation-more-vert right"></i></span>
+                        <p><!-- <a href="#">Project link</a> --></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">MealGrid<i class="mdi-navigation-close right"></i></span>
+                        <p>The MealGrid is at the core of what Meal Blueprint "brings to the table". Offering users the ability to create customized meal plans with respect to portion and macronutrient requirements each week.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <!-- image grocerylist here  -->
+                        <img class="activator" src="img/list.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Grocery List <i class="mdi-navigation-more-vert right"></i></span>
+                        <p><!-- <a href="#">Project link</a> --></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Exportable Grocery List<i class="mdi-navigation-close right"></i></span>
+                        <p>Use the Meal Bluerprint grocery list to make organized and efficient trips to the grocery store to meet all of your nutrition needs for the week.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/dashboard.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Dashboard View<i class="mdi-navigation-more-vert right"></i></span>
+                        <p><!-- <a href="#">Project link</a> --></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Dashboard View<i class="mdi-navigation-close right"></i></span>
+                        <p>Use the dashboard view to monitor settings, make adjustments, and track your progress towards fitness goals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Parallax Container-->
+<!-- <div class="parallax-container">
+     <! image here -->
+    <!-- <div class="parallax"><img src="img/parallax1.png"></div>
+</div>  --> -->-->
+
+
+    <!--  Scripts-->
+    <script src="min/plugin-min.js"></script>
+    <script src="min/custom-min.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
+
+
+    </body>
+</html>

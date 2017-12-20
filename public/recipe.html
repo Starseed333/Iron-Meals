@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add a Recipe</title>
+
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width initial-scale=1.0'>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+<strong>Recipe Info</strong><br>
+Name: <input type='text' id='recipe-name'><br>
+URL: <input type='text' id='recipe-url'><br>
+Image URL: <input type='text' id='recipe-image'><br>
+Servings: <input type='text' id='recipe-servings'><br><br>
+Meal: <input type='text' id='recipe-meal'><br><br>
+Creator Name: <input type='text' id='recipe-creator'><br><br>
+
+
+<strong>Macros</strong><br>
+Carbs: <input type='text' id='recipe-carbs'><br>
+Protein: <input type='text' id='recipe-protein'><br>
+Fat: <input type='text' id='recipe-fat'><br><br>
+
+<button id='add-ingredient'>+</button>
+Ingredients
+<div id='ingredient-area'></div><br><br>
+
+<button id='add-tag'>+</button>
+Tags
+<div id='tag-area'></div><br><br>
+
+<br>
+<button id='add-recipe'>ADD RECIPE</button>
+<!-- Javascript -->
+<script type='text/javascript'>
+	var iNum = 0;
+	var tNum = 0;
+	// Dynamic input for ingredients
+	$('#add-ingredient').on('click', function(){
+		var newSet = $('<div>');
+		newSet.append('Amount: ').append($('<input>').attr('type', 'text').attr('id', 'amount' + iNum));
+		newSet.append('Measurement: ').append($('<input>').attr('type', 'text').attr('id', 'measurement' + iNum));
+		newSet.append('Ingredient: ').append($('<input>').attr('type', 'text').attr('id', 'ingredient' + iNum));
+		$('#ingredient-area').append(newSet);
+		iNum++;
+	});
+	// Dynamic input for tags
+	$('#add-tag').on('click', function(){
+		var newTag = $('<div>');
+		newTag.append('Tag: ').append($('<input>').attr('type', 'text').attr('id', 'tag' + tNum));
+		$('#tag-area').append(newTag);
+		tNum++;
+	});
+	//button on click
+	$('#add-recipe').on('click', function(){
+		var newRecipe = {
+			name: $('#recipe-name').val().trim(),
+			url: $('#recipe-url').val().trim(),
+			image: $('#recipe-image').val().trim(),
+			servings: parseInt($('#recipe-servings').val().trim()),
+			meal: $('#recipe-meal').val().trim(),
+			creator: $('#recipe-creator').val().trim(),
+			carbs: parseFloat($('#recipe-carbs').val().trim()),
+			protein: parseFloat($('#recipe-protein').val().trim()),
+			fat: parseFloat($('#recipe-fat').val().trim())
+		};
+		// Add ingredients
+		var ingredients = [];
+		for (var i = 0; i < iNum; i++){
+			ingredients.push({
+				amount: parseFloat($('#amount'+i).val()),
+				measurement: $('#measurement'+i).val().trim(),
+				ingredient: $('#ingredient'+i).val().trim()
+			});
+		}
+		newRecipe.ingredients = ingredients;
+		// Add tags
+		var tags = [];
+		for(var i = 0; i < tNum; i++){
+			tags.push($('#tag'+i).val().trim());
+		}
+		newRecipe.tags = tags;
+		$.post({
+			url: '/api/recipe',
+			method: 'POST',
+			data: newRecipe
+		})
+		.done(function(data){
+			console.log('Recipe added: ' + data);
+		});
+	});
+</script>
+
+</body>
+</html>

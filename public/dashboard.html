@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meal Blueprint | Dashboard</title>
+
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width initial-scale=1.0'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/nouislider.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/dashboardStyle.css">
+    <!-- import the javascript files -->
+	<script type="text/javascript" src="js/wNumb.js"></script>
+    <script type="text/javascript" src="js/nouislider.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+
+<body>
+    <nav class="blue">
+        <div class="nav-wrapper container">
+            <!-- image for the logo here -->
+            <a href="/" class="brand-logo"><img src='images/meal.png'></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li class="active"><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/myplan">My Plan</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li class="active"><a href="/dashboard">My Dashboard</a></li>
+                <li><a href="/myplan">My Plan</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h4>Dashboard</h4>
+    <div class="row">
+        <div class="col s12 l4">
+            <div class="card small">
+                <div class="card-content">
+                    <div class="row title">
+                        <span class="col s10 card-title">My Nutrition Profile</span>
+                        <a href="#nutrition-modal" class="waves-effect waves-light btn blue lighten-1 col s2">edit</a>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="card-body" id="card-body-nutrient">
+                        <p class="larger"><span class="tag">Dietary Restriction: </span><span id="dietPref"></span></p>
+                        <p class="larger"><span class="tag">Daily Total Calories: </span><span id="totalCalories"></span></p>
+                        <p class="nutrition"><span class="tag">Daily Protein: </span><span id="protein"></span></p>
+                        <p class="nutrition"><span class="tag">Daily Fat: </span><span id="fat"></span></p>
+                        <p class="nutrition"><span class="tag">Daily Carbs: </span><span id="carbs"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 l4">
+            <div class="card small">
+                <div class="card-content">
+                    <div class="row title">
+                        <span class="card-title"> Progress Tracker</span>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="card-body" id="card-body-progress">
+                        <div class="row" id="current-weight-label">
+                            <p> <span class="tag">Current Weight: </span><span class="currentWeight"></span></p>
+                        </div>
+                        <div class="meter fill nostripes">
+                            <span id="progress-bar"></span>
+                        </div>
+                        <div class="row" id="weight-div">
+                            <p class="col s6 start-weight"><span id="startWeight"></span></p>
+                            <p class="col s6 goal-weight"><span id="targetWeight"></span></p>
+                        </div>
+                        <div class="row">
+                            <p class="col s6 start-weight tag">Start Weight</p>
+                            <p class="col s6 goal-weight tag">Target Weight</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 l4">
+            <div class="card small">
+                <div class="card-content">
+                    <div class="row title">
+                        <span class="card-title">Shopping List</span>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="card-body" id="card-body-shopping">
+                        <a href="#shopping-modal" class="waves-effect waves-light blue lighten-1 btn-large" id="shopping-list">Shopping List</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 l4">
+            <div class="card small">
+                <div class="card-content">
+                    <div class="row title">
+                        <span class="card-title">Daily Macronutrient Breakdown</span>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="card-body">
+                        <p class="comment">broken down by calories per macronutrient</p>
+                        <div id="piechart_3d"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 l4">
+            <div class="card small">
+                <div class="card-content">
+                    <div class="row title">
+                        <span class="col s10 card-title"> My Fitness Profile </span>
+                        <a href="#fitness-profile-modal" class="waves-effect waves-light btn blue lighten-1 col s2">edit</a>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="card-body" id="card-body-fitness">
+                        <p><span class="tag">Gender: </span><span class="fitness-info" id="gender"></span></p>
+                        <p><span class="tag">Age: </span><span class="fitness-info" id="age"></span></p>
+                        <p><span class="tag">Activity Level: </span><span class="fitness-info" id="activity"></span></p>
+                        <p><span class="tag">Height: </span><span class="fitness-info" id="height"></span></p>
+                        <p><span class="tag">Current Weight: </span><span class="fitness-info currentWeight"></span></p>
+                        <p><span class="tag">Desired Rate of Weight Change: </span><span class="fitness-info" id="rateOfChange"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 l4">
+            <div class="card small">
+                <div class="card-content">
+                    <div class="row title">
+                        <span class="card-title">My Account</span>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="card-body" id="card-body-account">
+                        <p><span class="tag">Name: </span><span id="name"></span></p>
+                        <p><span class="tag">Email: </span><span id="email"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Fitness Modal-->
+    <div id="fitness-profile-modal" class="modal">
+        <div class="row">
+            <div class="col s12">
+                <div class="modal-content">
+                    <h3>Fitness Profile</h3>
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="col s4">
+                                    <label for="gender-input">Gender</label>
+                                    <select class ="browser-default" id="gender-input">
+                                        <option value="" disabled selected="selected">Select</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female" >Female</option>
+                                    </select>
+                                </div>
+                                <div class="input-field col s4">
+                                    <input id="age-input"  type="number" class="validate" >
+                                    <label for="age-input">Age</label>
+                                </div>
+                                <div class="input-field col s4">
+                                    <input id="height-input" type="number" class="validate" >
+                                    <label for="height-input">Height (in inches)</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s4">
+                                    <input id="current-weight-input" type="number" class="validate" >
+                                    <label for="current-weight-input">Current Weight (in pounds)</label>
+                                </div>
+                                <div class="input-field col s4">
+                                    <input id="start-weight-input" type="number" class="validate" >
+                                    <label for="start-weight-input">Start Weight (in pounds)</label>
+                                </div>
+                                <div class="input-field col s4">
+                                    <input id="target-weight-input" type="number" class="validate" >
+                                    <label for="target-weight-input">Target Weight (in pounds)</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <label for="activity-level-input">Activity Level</label>
+                                    <select class="browser-default" id="activity-level-input">
+                                        <option value="" disabled selected="selected">Select</option>
+                                        <option value="1">Sedentary (little or no exercise)</option>
+                                        <option value="2">Lightly active (light exercise 1-3 days/week)</option>
+                                        <option value="3">Moderately active (moderate exercise 3-5 days/week)</option>
+                                        <option value="4">Very active (hard exercise 6-7 days a week)</option>
+                                        <option value="5">Extra active (very hard exercise & physical job)</option>
+                                    </select>
+                                </div>
+                                <div class="col s6">
+                                    <label for="change-rate-input">Desired Rate of Weight Change</label>
+                                    <select class="browser-default" id="change-rate-input">
+                                        <option value="" disabled selected="selected">Select</option>
+                                        <option value="1">Gain 1lb per week</option>
+                                        <option value="2">Gain .5lb per week</option>
+                                        <option value="2">Lose .5lb per week</option>
+                                        <option value="4">Lose 1lb per week</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="modal-action waves-effect waves-green btn-flat blue lighten-1 action" id="save-fitness-button">Save</button>
+                    <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Nutrition Modal-->
+    <div id="nutrition-modal" class="modal">
+        <div class="row">
+            <div class="col s12">
+                <div class="modal-content">
+                    <h3>Nutrition Profile</h3>
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <h5>Dietary Restriction</h5>
+                                <select class ="browser-default" id="diet-input">
+                                    <option value="" disabled selected="selected">Select</option>
+                                    <option value="None">None</option>
+                                    <option value="Vegetarian">Vegetarian</option>
+                                    <option value="Vegan" >Vegan</option>
+                                </select>
+                            </div>
+
+                            <!-- Macros sliders -->
+                            <h5>Macronutrient Adjustments</h5>
+                            <div id="macropicker">
+                                <label>Protein</label>
+                                <div class="sliders" id="rangeSlider1"></div>
+                                <span id="slider-range-value1"></span>%</br>
+                                <label>Fat</label>
+                                <div class="sliders" id="rangeSlider2"></div>
+                                <span id="slider-range-value2"></span>%</br>
+                                <label>Carbs</label>
+                                <div class="sliders" id="rangeSlider3"></div>
+                                <span id="slider-range-value3"></span>%</br>
+                            </div>
+
+                        </form>
+                    </div>
+                    <p class="comment">Total Percentage: <span id="total-percent"></span>%</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="modal-action waves-effect waves-green btn-flat blue lighten-1 action" id="save-nutrition-button">Save</button>
+                    <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--GROCERY List Modal-->
+    <div id="shopping-modal" class="modal modal-fixed-footer">
+        <div class="row">
+            <div class="col s12">
+                <div class="modal-content">
+                    <h3>Grocery List</h3>
+                    <div id="shoppingList"></div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript" src="js/shoppingList.js"></script>
+<script type="text/javascript" src="js/dashboard-load.js"></script>
+<script type="text/javascript" src="js/dashboard-nutrition.js"></script>
+<script type="text/javascript" src="js/dashboard-fitness.js"></script>
+
+</body>
+</html>
