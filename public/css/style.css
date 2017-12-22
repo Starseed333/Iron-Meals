@@ -1,0 +1,432 @@
+/* app.html styles */
+
+/* ELEMENTS */
+html, body {
+	height: 100vh;
+	overflow-x: hidden;
+	background-color: #ccff90;
+}
+
+/* COMPONENTS */
+
+.no-select {
+	user-select: none;
+}
+/*include brand logo here*/
+.brand-logo img {
+	height: 75px;
+	width: auto;
+	margin-left: 35px;
+	margin-top: 2px;
+}
+
+.btn {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/* label color */
+.input-field label {
+	color: #2196F3;
+}
+/* label focus color */
+.input-field:focus + label {
+	color: #2196F3;
+}
+/* label underline focus color */
+.input-field:focus {
+	border-bottom: 1px solid #2196F3;
+	box-shadow: 0 1px 0 0 #2196F3;
+}
+
+.app-wrapper {
+	height: 100%;
+	margin: 20px;
+}
+
+#plan-date {
+	font-size: 26px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 35px;
+	color: #2196F3;
+}
+
+#calendar {
+	overflow-x: scroll;
+	white-space: nowrap;
+}
+
+.day-column {
+	border: 1px solid #91cdf7;
+	display: inline-block;
+	width: 255px;
+	margin-left: 7px;
+	margin-right: 7px;
+	margin-bottom: 5px;
+	border-radius: 7px;
+	background-color: #abd9fc;
+	box-shadow: 1px 1px 4px #58585a;
+	min-height: 150px;
+	vertical-align: top;
+	padding-bottom: 5px;
+}
+
+.day-name {
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	background-color: white;
+	padding-top: 8px;
+	padding-bottom: 5px;
+}
+
+.day-name h3 {
+	font-size: 22px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	color: #0f5991;
+}
+
+.day-column-left {
+	margin-left: 0px !important;
+}
+
+.day-column-right {
+	margin-right: 0px !important;
+}
+
+.chartArea {
+	width: 95%;
+}
+
+p.calories-txt {
+	margin: 6px 3px;
+	background-color: white;
+	border-radius: 3px;
+	color: #0f5991;
+}
+
+.recipe-area {
+	overflow-y: scroll;
+}
+
+.day-recipe {
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	border: 1px solid #e3f1fc;
+	width: 243px;
+	background-color: #e3f1fc;
+	background-position: center; 
+}
+
+.day-recipe:hover {
+	background-blend-mode: lighten;
+}
+
+.day-recipe:hover > .day-recipe-body {
+	color: rgba(0, 0, 0, 1);
+}
+
+.popout-enter {
+	opacity: 0.01;
+}
+
+.popout-enter.popout-enter-active {
+	opacity: 1;
+	transition: opacity 500ms ease-in;
+}
+
+@keyframes wobble {
+	0% { transform: rotate(0deg)  } 
+	15% { transform: rotate(-3deg); } 
+	30% { transform: rotate(2.5deg); } 
+	45% { transform: rotate(-2deg); } 
+	60% { transform: rotate(1.5deg); }
+	75% { transform: rotate(-1deg); }
+	100% { transform: rotate(0deg) } 
+}
+
+.wobble {
+	animation-duration: 1.5s;
+	animation-name: wobble; 
+}
+
+.popout-leave {
+	opacity: 1;
+}
+
+.popout-leave.popout-leave-active {
+	opacity: 0.01;
+	transition: opacity 250ms ease-in;
+}
+
+.day-recipe-tl {
+	width: 213px;
+	padding: 5px;
+	height: 30px;
+	border-top-left-radius: 5px;
+	background-color: #2196F3;
+	overflow-x: hidden;
+	display: inline-block;
+	color: white;
+}
+
+.day-recipe-tl:hover {
+	background-color: #F2F2F2;
+}
+
+.day-recipe-tl > h3 > a {
+	color: white;
+}
+
+.day-recipe-tl:hover > h3 > a {
+	color: #30c963;
+}
+
+.recipe-name {
+	margin: 0px;
+	width: 100%;
+	font-size: 18px;
+}
+
+.day-recipe-tr {
+	padding: 5px 3px 5px 7px;
+	width: 27px;
+	height: 30px;
+	border-top-right-radius: 5px;
+	display: inline-block;
+	transition: color 0.3s ease;
+	background-color: #2196F3;
+	border-left: .5px solid #e3f1fc;
+}
+
+.day-recipe-tr:hover {
+	background-color: white;
+}
+
+.day-recipe-tr:hover > a > p {
+	color: red;
+}
+
+p.btn-delete {
+	margin: 0px;
+	font-size: 14px;
+	line-height: 0px;
+}
+
+a.btn-delete {
+	color: black;
+	float: right;
+}
+
+.day-recipe-body {
+	margin: 0px;
+	width: 243px;
+	color: rgba(0, 0, 0, 0);
+}
+
+.day-recipe-body p {
+	margin: 3px 6px;
+}
+
+.day-recipe > p {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.day-recipe .row {
+	margin-bottom: 5px;
+}
+
+.macro-text {
+	font-size: 9.5px;
+}
+
+table {
+	font-size: 14px;
+	padding: 2px;
+	width: 120px;
+	margin: auto;
+	margin-top: 8px;
+}
+
+tr {
+	padding: 1px;
+	margin: 0px;
+}
+
+td {
+	padding: 1px;
+	margin: 0px;
+}
+
+td a {
+	color: #30c963;
+}
+
+td a:hover {
+	color: #1f9346;
+}
+
+th {
+	padding: 1px;
+	margin: 0px;
+}
+
+.delete-meal {
+	font-size: 20px;
+}
+
+.search-header {
+	margin: 8px 4px;
+	background-color: white;
+	border-radius: 5px;
+	padding: 3px;
+	color: #0f5991;
+}
+
+#search-bar {
+	width: 280px;
+	height: 100%;
+	z-index: 100;
+	background-color: #ABD9FC;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	box-shadow: -4px 0px 8px #58585a;
+}
+
+#search-term {
+	border: 1px solid #E3F1FC;
+	background-color: #f2f2f2;
+	box-shadow: 1px 1px 4px #58585a;
+}
+
+#search-term:focus {
+	background-color: white;
+}
+
+.input-field input[type=text]:focus {
+	border-bottom: 1px solid #000;
+	box-shadow: 0 1px 0 0 #000;
+}
+
+#search-bar h3 {
+	font-size: 18px;
+	height: 100%;
+}
+
+#pull-search {
+	position: absolute;
+	left: -70px;
+	top: 69px;
+	background-color: white;
+	width: 62px;
+	height: 62px;
+	border: 3px solid #1c77bc;
+	border-radius: 100%;
+	box-shadow: 1px 1px 4px #58585a;
+	transition: background-color 0.5s ease;
+}
+
+#pull-search:hover {
+	background-color: #4ea3e5;
+}
+
+#pull-search i {
+	font-size: 48px;
+	color: #2196F3;
+	margin: auto;
+}
+
+.dropdown-button {
+	margin-left: 10px;
+}
+
+form label {
+	color: #0f5991;;
+}
+
+.checkbox-blue:checked {
+	border: 2px solid #ff9800;
+	background-color: #ff9800;
+}
+
+.search-results {
+	overflow: scroll;
+}
+
+.search-result {
+	/*padding: 5px;*/
+	border-radius: 5px;
+	/*Background color if image isn't available*/
+	background-color: #e3f1fc;
+	background-blend-mode: lighten;
+	border: 1px solid #e3f1fc;
+	margin: auto;
+	margin-top: 5px;
+	width: 255px;
+}
+
+.search-result:hover {
+	background-blend-mode:normal;
+}
+
+.search-recipe-name {
+	/*width: 100%;*/
+	width: 253px;
+	padding: 5px;
+	height: 30px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background-color: #2196F3;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.search-recipe-name a {
+	color: white;
+}
+
+.search-recipe-name:hover {
+	background-color: #F2F2F2;
+}
+
+.search-recipe-name:hover > h3 > a {
+	color: #30c963;
+}
+
+.search-result h3 {
+	margin-top: 3px;
+	margin-bottom: 9px;
+	line-height: 18px;
+}
+
+.search-result p {
+	margin: 5px;
+}
+
+.small-text {
+	line-height: 9px;
+	font-size: 12px;
+}
+
+.add-day {
+	font-size: 12px;
+}
+
+.add-day .material-icons {
+	font-size: 14px;
+}
+
+nav ul a{
+		font-size: 1.2rem;
+		color: #FFF;
+		letter-spacing: 2px;
+		display: block;
+		font-weight: 300;
+		padding: 0px 15px;
+}

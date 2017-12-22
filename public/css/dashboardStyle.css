@@ -1,0 +1,203 @@
+html, body {
+    height: 100%;
+    background-color: white;
+    
+}
+
+*, *:before, *:after {
+    box-sizing: initial;
+}
+
+.brand-logo img {
+	height: 60px;
+	width: auto;
+	margin-left: 35px;
+	margin-top: 2px;
+}
+
+nav ul a{
+    font-size: 1.2rem;
+    color: #FFF;
+    letter-spacing: 2px;
+    display: block;
+    font-weight: 300;
+    padding: 0px 15px;
+}
+
+
+h4 {
+    text-align: center;
+}
+
+.card {
+   background-color: #ABD9FC;
+   border: 1px solid #91cdf7;
+   border-radius: 7px;
+
+}
+
+.card.small {
+    height: 275px;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card .card-title {
+    font-weight: 400;
+}
+
+.title {
+    background: white;
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-left: 24px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    margin: 0;
+    color: #0f5991;
+}
+
+.card .card-content {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.card .card-content p {
+    color: darkslategrey;
+}
+
+#card-body-nutrient {
+    text-align: center;
+    padding: 20px 0px;
+}
+
+#card-body-progress {
+    text-align: center;
+}
+
+#card-body-shopping {
+    text-align: center;
+    padding: 60px 0px;
+}
+
+#card-body-fitness {
+    padding-top: 30px;
+}
+
+#card-body-account {
+    text-align: center;
+    padding: 60px 0px;
+    line-height: 2;
+}
+
+.card-body {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+#weight-div {
+    margin: 0;
+}
+
+#current-weight-label {
+    margin: 50px 10px 10px 10px;
+    text-align: center;
+}
+
+.start-weight {
+    text-align: left
+}
+
+.goal-weight {
+    text-align: right
+}
+
+.tag {
+    font-weight: bold;
+}
+
+.nutrition {
+    line-height: 2;
+}
+
+.larger {
+    font-size: 18px;
+}
+
+.comment {
+    text-align: center;
+}
+
+.modal .modal-content {
+    height: 400px;
+}
+
+.action {
+    color: #fff;
+}
+
+.meter {
+    height: 20px;  /* Can be anything */
+    position: relative;
+    margin: 10px 0 10px 0; /* Just for demo spacing */
+    background: #555;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    padding: 5px;
+    -webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+    -moz-box-shadow   : inset 0 -1px 1px rgba(255,255,255,0.3);
+    box-shadow        : inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+
+.meter > span {
+    display: block;
+    height: 100%;
+       -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+           -moz-border-radius-topright: 8px;
+        -moz-border-radius-bottomright: 8px;
+               border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        -webkit-border-top-left-radius: 20px;
+     -webkit-border-bottom-left-radius: 20px;
+            -moz-border-radius-topleft: 20px;
+         -moz-border-radius-bottomleft: 20px;
+                border-top-left-radius: 20px;
+             border-bottom-left-radius: 20px;
+    background-color: rgb(43,194,83);
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, rgb(43,194,83)),
+      color-stop(1, rgb(84,240,84))
+     );
+    background-image: -moz-linear-gradient(
+      center bottom,
+      rgb(43,194,83) 37%,
+      rgb(84,240,84) 69%
+     );
+    -webkit-box-shadow:
+      inset 0 2px 9px  rgba(255,255,255,0.3),
+      inset 0 -2px 6px rgba(0,0,0,0.4);
+    -moz-box-shadow:
+      inset 0 2px 9px  rgba(255,255,255,0.3),
+      inset 0 -2px 6px rgba(0,0,0,0.4);
+    box-shadow:
+      inset 0 2px 9px  rgba(255,255,255,0.3),
+      inset 0 -2px 6px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.animate > span:after {
+    display: none;
+}
+
+.noUi-base {
+    background-color: #2196F3
+}

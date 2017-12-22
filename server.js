@@ -7,16 +7,16 @@ const passport = require('passport');
 const expressSession = require('express-session');
 
 // Express server
-const app = express();
+const server = express();
 // Set dynamic porting for development
 const PORT = process.env.PORT || 3000;
 // Set middleware functions
-app.use(express.static('./public'));
-app.use(cookieParser());
-app.use(bodyParser.text());
+server.use(express.static('./public'));
+server.use(cookieParser());
+server.use(bodyParser.text());
 // Configure body parser for AJAX requests
-app.use(bodyParser.json({type: 'application/vnd.api+json'}));
-app.use(bodyParser.urlencoded({extended: true}));
+server.use(bodyParser.json({type: 'application/vnd.api+json'}));
+server.use(bodyParser.urlencoded({extended: true}));
 
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;
@@ -29,9 +29,9 @@ mongoose.connect(
 );
 // Configuring Passport
 //Middleware 
-app.use(expressSession({secret: 'keyboard-cat', resave: true, saveUninitialized: true }));
-app.use(passport.initialize());
-app.use(passport.session());
+server.use(expressSession({secret: 'keyboard-cat', resave: true, saveUninitialized: true }));
+server.use(passport.initialize());
+server.use(passport.session());
 
 // Initialize Passport
 var initPassport = require('./passport/init');
@@ -41,6 +41,6 @@ initPassport(passport);
 require('./routes/html-routes.js')(server);
 require('./routes/api-routes.js')(server);
 // Start the API server
-app.listen(PORT, function() {
+server.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
