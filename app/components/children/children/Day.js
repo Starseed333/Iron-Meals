@@ -1,6 +1,6 @@
 const React = require('react');
 const createReactClass = require('create-react-class');
-const ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+const CSSTransitionGroup = require('react-transition-group/CSSTransitionGroup') // ES5 with npm
 // import the react pie chart 
 import {Pie} from 'react-chartjs-2';
 
@@ -116,7 +116,7 @@ const Day = createReactClass({
 					</div>
 
 					<div className='recipe-area'>
-					<ReactCSSTransitionGroup
+					<CSSTransitionGroup
 						transitionName="popout"
 						transitionEnterTimeout={500}
 						transitionLeaveTimeout={250}
@@ -144,7 +144,7 @@ const Day = createReactClass({
 									</div>
 								)
 							})}
-					</ReactCSSTransitionGroup>
+					</CSSTransitionGroup>
 					</div>
 				</div>
 							

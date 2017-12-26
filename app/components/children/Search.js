@@ -1,7 +1,7 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const createReactClass = require('create-react-class');
-const ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+var CSSTransitionGroup = require('react-transition-group/CSSTransitionGroup') // ES5 with npm
 
 const Search = createReactClass({
 
@@ -131,7 +131,7 @@ const Search = createReactClass({
 					<div className='col sm12'>
 						<div className='search-results' >
 
-							<ReactCSSTransitionGroup
+							<CSSTransitionGroup
 							transitionName="popout"
 							transitionEnterTimeout={250}
 							transitionLeaveTimeout={250}>
@@ -174,7 +174,7 @@ const Search = createReactClass({
 									</div>
 								)
 							})}
-							</ReactCSSTransitionGroup>
+							<CSSTransitionGroup>
 						</div>
 					</div>
 				</div>
