@@ -1,7 +1,7 @@
-import axios from "axios";
+const axios = require("axios");
 
-
-var qs = require('qs');
+// qs module - a querystring parsing and stringifying library with some added security
+const qs = require('qs');
 
 module.exports = {
 	// Search for recipes based on term

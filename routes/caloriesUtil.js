@@ -26,6 +26,7 @@ function calculateDCN(BMR, activityLevel) {
     return userDCN;
 };
 // calculate users rate of change by the average
+//calculate the free form fitnes UNDER CONSTRUCTION
 module.exports = {
     calculateFFF: function(user) {
          var userBMR = calculateBMR(user.gender, user.height, user.currentWeight, user.age);
