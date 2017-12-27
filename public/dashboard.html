@@ -2,22 +2,23 @@
 <html>
 <head>
 	<title>Meal Blueprint | Dashboard</title>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meal Mapper | Dashboard</title>
 
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width initial-scale=1.0'>
-    <!-- Materialize -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width initial-scale=1.0'>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/nouislider.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/dashboardStyle.css">
-    <!-- import the javascript files -->
-	<script type="text/javascript" src="js/wNumb.js"></script>
+
+    <script type="text/javascript" src="js/wNumb.js"></script>
     <script type="text/javascript" src="js/nouislider.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 </head>
@@ -25,11 +26,10 @@
 <body>
     <nav class="blue">
         <div class="nav-wrapper container">
-            <!-- image for the logo here -->
-            <a href="/" class="brand-logo"><img src='images/meal.png'></a>
+            <a href="/" class="brand-logo"><img src='images/meal-mapper-logo.png'></a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li class="active"><a href="/dashboard">Dashboard</a></li>
+                <li class="active"><a href="/dashboard">My Dashboard</a></li>
                 <li><a href="/myplan">My Plan</a></li>
                 <li><a href="/logout">Logout</a></li>
             </ul>
@@ -151,6 +151,7 @@
     </div>
 
     <!--Fitness Modal-->
+
     <div id="fitness-profile-modal" class="modal">
         <div class="row">
             <div class="col s12">
@@ -217,7 +218,6 @@
                         </form>
                     </div>
                 </div>
-                <!-- Dash Modal Footer -->
                 <div class="modal-footer">
                     <button type="submit" class="modal-action waves-effect waves-green btn-flat blue lighten-1 action" id="save-fitness-button">Save</button>
                     <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Close</a>
@@ -227,6 +227,7 @@
     </div>
 
     <!--Nutrition Modal-->
+
     <div id="nutrition-modal" class="modal">
         <div class="row">
             <div class="col s12">
@@ -236,6 +237,7 @@
                         <form class="col s12">
                             <div class="row">
                                 <h5>Dietary Restriction</h5>
+                                <!--<label for="diet-input">Dietary Restriction</label>-->
                                 <select class ="browser-default" id="diet-input">
                                     <option value="" disabled selected="selected">Select</option>
                                     <option value="None">None</option>
@@ -257,6 +259,7 @@
                                 <div class="sliders" id="rangeSlider3"></div>
                                 <span id="slider-range-value3"></span>%</br>
                             </div>
+                            <!-- End Macrosliders HTML -->
 
                         </form>
                     </div>
@@ -270,12 +273,12 @@
         </div>
     </div>
 
-    <!--GROCERY List Modal-->
+    <!--Shopping List Modal-->
     <div id="shopping-modal" class="modal modal-fixed-footer">
         <div class="row">
             <div class="col s12">
                 <div class="modal-content">
-                    <h3>Grocery List</h3>
+                    <h3>Shopping List</h3>
                     <div id="shoppingList"></div>
                 </div>
                 <div class="modal-footer">
@@ -284,7 +287,7 @@
             </div>
         </div>
     </div>
-<!-- js files for the dashboard -->
+
 <script type="text/javascript" src="js/shoppingList.js"></script>
 <script type="text/javascript" src="js/dashboard-load.js"></script>
 <script type="text/javascript" src="js/dashboard-nutrition.js"></script>
