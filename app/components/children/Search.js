@@ -174,7 +174,7 @@ const Search = createReactClass({
 									</div>
 								)
 							})}
-							<CSSTransitionGroup>
+							</CSSTransitionGroup>
 						</div>
 					</div>
 				</div>
