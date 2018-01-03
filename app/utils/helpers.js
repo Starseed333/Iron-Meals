@@ -24,4 +24,4 @@ module.exports = {
 	saveMealPlan: function(meals, planId){
 		return axios.put('/api/mealplan/' + planId, qs.stringify(meals));
 	}
-}
+};

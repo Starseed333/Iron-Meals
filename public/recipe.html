@@ -58,6 +58,7 @@ Tags
 	});
 	//button on click
 	$('#add-recipe').on('click', function(){
+		console.log('button clicked');
 		var newRecipe = {
 			name: $('#recipe-name').val().trim(),
 			url: $('#recipe-url').val().trim(),

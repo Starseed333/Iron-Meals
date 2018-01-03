@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 //recipe Schema 
-var Recipe = new mongoose.Schema({
+var Recipe = new Schema({
 	name: {
 		type: String
 	},

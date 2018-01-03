@@ -88,7 +88,7 @@ const Search = createReactClass({
 	// Include the search bar and button and form here
 	//Include the table for the day
 	render: function(){
-
+		console.log('i was triggered during render search.js');
 		return (
 
 			<div id='search-bar'>

@@ -174,12 +174,13 @@ const Main = createReactClass({
 	// Meal Planner left side of the screen
 	// Search Bar for the right side of the screen
 	render: function() {
+		console.log('i was triggered during render main.js');
 		return (
 			<div>
 				
 				<nav className = "blue">
 					<div className="nav-wrapper container">
-						<a href="/" className="brand-logo"><img src='images/meal.png'></img></a>
+						<a href="/" className="brand-logo"><img src='images/ironmeals.png'></img></a>
 						<ul id="nav-mobile" className="right hide-on-med-and-down">
 							<li><a href="/dashboard">My Dashboard</a></li>
 							<li className='active'><a href="#">My Plan</a></li>

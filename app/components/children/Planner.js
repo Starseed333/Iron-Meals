@@ -22,6 +22,7 @@ const Planner = createReactClass({
 	},
 
 	render: function(){
+		console.log('I was triggered during render Planner.js');
 		// console.log(this.props.mealPlan);
 		var showDate = moment(this.props.startDate).format('dddd, MMMM Do');
 		// Meal Dates

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-var Mealplan = new mongoose.Schema({
+var Mealplan = new Schema({
 	// Date of start of week
 	startDate: {
 		type: Date,

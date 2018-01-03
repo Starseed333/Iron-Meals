@@ -12,3 +12,27 @@
 .action {
     color: #fff;
 }
+
+/*added for feature pictures and card height------------------------------*/
+.features{
+	height: 200px;
+}
+
+.card{
+	height: 300px;
+}
+
+.sliderimage{
+	height: 600px;
+}
+
+.bannerimage{
+	height: 450px;
+	margin: 0px auto;
+	
+}
+
+#index-banner{
+	border-top: 3px solid #ffffff;
+	padding-top: 50px;
+}
