@@ -240,6 +240,7 @@ module.exports = function(server){
 
 	// Search for all recipes based on search term
 	server.get('/api/recipes/:search', function(request, response){
+
 		var search = request.params.search.toLowerCase().trim();
 		var searchArray = search.split(' ');
 		var resultsItems = [];
@@ -311,8 +312,9 @@ module.exports = function(server){
 
 	});
 
-	// Scrape recipe from food site
+// Scrape recipe from food site///////////////////////////////////
 	server.post('/api/scrape/', function(request, response){
+		
 		var url = request.body.url;
 		var meal = request.body.meal;
 		var tags = request.body.tags;
@@ -320,18 +322,23 @@ module.exports = function(server){
 		var vegan = request.body.vegan;
 
 		Recipe.findOne({url: url}, function(error, recipe){
+			console.log(error || recipe);
 			// Only add if the recipe is not yet in the database
 			if(!recipe){
 
-				// Scrape Allrecipes
+				//Scrape Allrecipes
 				if(url.toLowerCase().indexOf('allrecipes.com') !== -1){
 
 					// Get url data
 					urlrequest(url, function(err, rsp, html){
+
+						console.log("error:", err);
+						console.log("rsp:", rsp)
 						var $ = cheerio.load(html);
 
 						// Get recipe title
 						var recipeName = $('h1.recipe-summary__h1').text();
+						console.log(recipeName || "test");
 						var recipeImage = $('.rec-photo').attr('src');
 						var recipeCreator = 'Allrecipes.com';
 						var recipeServings = parseInt($('#servings').attr('data-original'));
