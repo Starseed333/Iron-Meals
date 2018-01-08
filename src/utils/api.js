@@ -1,9 +1,4 @@
-// Load environmental variables
-// require('dotenv').load();
-
-// const API_ID = process.env.REACT_APP_API_ID
-// const APP_KEY = process.env.REACT_APP_APP_KEY
-
+// import developer keys here
 const API_ID = "ed0ec8c3";
 const APP_KEY = "f553388cfbb8fe8c794404ed490afeb7";
 

@@ -1,4 +1,6 @@
+//dependencies
 import React from 'react';
+//document the intended types of properties passed to components
 import PropTypes from 'prop-types';
 
 const ShoppingList = ({ list }) => (

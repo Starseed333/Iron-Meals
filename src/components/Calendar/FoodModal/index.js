@@ -10,8 +10,9 @@ import { capitalize } from '../../../utils/helpers'
 
 // Our Components 
 import FoodList from './FoodList';
-
+//FoodModal here extend the component
 class FoodModal extends Component {
+  //mount the modal into the body
   componentWillMount() {
     Modal.setAppElement('body');
  }

@@ -1,3 +1,4 @@
+//calender data save into the store
 import {
   ADD_RECIPE,
   REMOVE_FROM_CALENDAR,
@@ -40,7 +41,7 @@ const initialCalendarState = {
     dinner: null,
   },
 }
-
+//use the spread operator for the state
 export default function calendar (state = initialCalendarState, action) {
   const { day, food, meal } = action;
 

@@ -7,9 +7,8 @@ import { capitalize } from '../utils/helpers'
 
 // Components
 import Calendar from './Calendar';
-
-
- const moment = require('moment');
+//require moment
+const moment = require('moment');
 
 export default  class App extends Component {
 
@@ -50,10 +49,6 @@ export default  class App extends Component {
                 </div>
               </div>
             </div>
-
-
-
-          
             
           </div>
         </div>

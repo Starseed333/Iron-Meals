@@ -2,8 +2,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import Modal from 'react-modal';
-import CalendarIcon from 'react-icons/lib/fa/calendar-plus-o';
-import ShoppingCart from 'react-icons/lib/fa/shopping-cart';
+import List from 'react-icons/lib/fa/edit';
+import CalendarIcon from 'react-icons/lib/fa/sticky-note-o';
 
 // Our Dependencies
 import { fetchRecipes } from '../../utils/api';
@@ -125,7 +125,7 @@ class Calendar extends Component {
 
     return (
       <div>
-        <ShoppingCart 
+        <List 
           size={30}
           className="shopping-list"
           onClick={this.openIngredientsModal}

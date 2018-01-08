@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+  background-image: url("http://stiritupmagazine.co.uk/wp-content/uploads/2015/03/Hospital-food-background.jpg");
 }
 
 ul {
@@ -11,7 +12,12 @@ ul {
 li {
   list-style-type: none;
 }
+.grey {
 
+  
+   
+
+}
 .container {
   margin: 0 auto;
   max-width: 1070px;
@@ -23,13 +29,13 @@ li {
   font-size: 50px;
   font-weight: 300;
   margin: 10px 0;
-  color: red;
+  color: black;
 }
 
 .subheader {
   font-size: 30px;
   font-weight: 300;
-  color: red;
+  color: black;
 }
 
 .icon-btn {
