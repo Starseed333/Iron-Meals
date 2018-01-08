@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Recipe</title>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+Allrecipes URL: <input type='text' id='recipe-url'><br>
+
+<!--Meal Modal Drop -->
+<select id='mealdrop' name="meal">
+  <option value="breakfast">Breakfast</option>
+  <option value="lunch">Lunch</option>
+  <option value="dinner">Dinner</option>
+  <option value="snack">Snack</option>
+</select>
+
+<br />
+<input type='checkbox' id='vegetarian-check'>Vegetarian?<br />
+<input type='checkbox' id='vegan-check'>Vegan?<br />
+
+<br />
+<!-- Tags (space separated): --> <input type='text' id='recipe-tags'><br>
+
+<button id='add-recipe'>Scrape Recipe</button>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- under construction -->
+<script src='js/add-recipe.js'></script>
+
+</body>
+</html>

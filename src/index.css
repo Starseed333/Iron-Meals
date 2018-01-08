@@ -14,7 +14,8 @@ li {
 }
 .grey {
 
-  
+  text-align: center;
+  background-color: grey;
    
 
 }
@@ -30,12 +31,18 @@ li {
   font-weight: 300;
   margin: 10px 0;
   color: black;
+  text-align: center;
 }
+
+
 
 .subheader {
   font-size: 30px;
   font-weight: 300;
   color: black;
+  text-align: center;
+  background-color: #DCDCDC;
+  border-radius: 25px;
 }
 
 .icon-btn {

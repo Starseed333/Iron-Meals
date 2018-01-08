@@ -42,10 +42,7 @@ export default  class App extends Component {
             <div className='row'>
               <div className='col s12'>
                 <div className='center-align'>
-                  {/*<a className="waves-effect waves-light btn blue lighten-1">Previous Plans</a>*/}
-                  <a className="waves-effect waves-light btn blue lighten-1" onClick={this.props.clearPlan}>Clear</a>
-                  <a className={"waves-effect waves-light btn lighten-1 " + this.props.saveColor} onClick={this.props.savePlan}>Save Plan</a>
-
+                 
                 </div>
               </div>
             </div>
