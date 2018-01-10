@@ -22,7 +22,7 @@ server.use(bodyParser.urlencoded({extended: true}));
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/mealsp",
+  process.env.MONGODB_URI || "mongodb://heroku_03txzbn4:fop6686kd3qv63mir6c1rhjbq@ds245277.mlab.com:45277/heroku_03txzbn4",
   {
     useMongoClient: true
   }
